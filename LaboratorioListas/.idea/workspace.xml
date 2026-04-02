@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6db192d-f63b-4b09-a011-ff3d24581de2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/CircularSimplyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Reproductor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/CircularDoublyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/DoubleNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/Partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratorioDos/src/main/java/DoubleNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioDos/src/main/java/DoubleNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratorioDos/src/main/java/DoublyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioDos/src/main/java/DoublyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratorioUno/src/main/java/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioUno/src/main/java/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LaboratorioUno/src/main/java/SimplyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioUno/src/main/java/SimplyList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -73,8 +69,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1775134679695</updated>
-      <workItem from="1775134684740" duration="13831000" />
+      <workItem from="1775134684740" duration="21489000" />
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LaboratorioCuatro/src/main/java/Main.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LaboratorioCuatro/src/main/java/Main.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
