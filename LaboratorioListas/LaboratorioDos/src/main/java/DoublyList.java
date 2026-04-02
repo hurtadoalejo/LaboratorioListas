@@ -46,14 +46,14 @@ public class DoublyList<T> implements Iterable<T> {
     }
 
     private void addFirst(DoubleNode<T> newNode) {
-        newNode.next = head;
-        head.prev = newNode;
+        newNode.setNext(head);
+        head.setPrev(newNode);
         head = newNode;
     }
 
     private void addLast(DoubleNode<T> newNode) {
-        tail.next = newNode;
-        newNode.prev = tail;
+        tail.setNext(newNode);
+        newNode.setPrev(tail);
         tail = newNode;
     }
 
@@ -63,27 +63,27 @@ public class DoublyList<T> implements Iterable<T> {
         if (index < size / 2) {
             current = head;
             for (int i = 0; i < index; i++) {
-                current = current.next;
+                current = current.getNext();
             }
         } else {
             current = tail;
             for (int i = size - 1; i >= index; i--) {
-                current = current.prev;
+                current = current.getPrev();
             }
         }
 
-        newNode.prev = current.prev;
-        newNode.next = current;
-        current.prev.next = newNode;
-        current.prev = newNode;
+        newNode.setPrev(current.getPrev());
+        newNode.setNext(current);
+        current.getPrev().setNext(newNode);
+        current.setPrev(newNode);
     }
 
     public void remove() {
         if (head == null) return;
 
-        head = head.next;
+        head = head.getNext();
         if (head != null) {
-            head.prev = null;
+            head.setPrev(null);
         } else {
             tail = null;
         }
@@ -93,12 +93,12 @@ public class DoublyList<T> implements Iterable<T> {
 
     public T getFirst() {
         if (head == null) return null;
-        return head.data;
+        return head.getData();
     }
 
     public T getLast() {
         if (tail == null) return null;
-        return tail.data;
+        return tail.getData();
     }
 
     public T get(int index) {
@@ -108,16 +108,16 @@ public class DoublyList<T> implements Iterable<T> {
         if (index < size / 2) {
             current = head;
             for (int i = 0; i < index; i++) {
-                current = current.next;
+                current = current.getNext();
             }
         } else {
             current = tail;
             for (int i = size - 1; i > index; i--) {
-                current = current.prev;
+                current = current.getPrev();
             }
         }
 
-        return current.data;
+        return current.getData();
     }
 
     public int size() {
@@ -134,10 +134,10 @@ public class DoublyList<T> implements Iterable<T> {
         DoubleNode<T> temp = head;
         int i = 0;
         while (i < index) {
-            temp = temp.next;
+            temp = temp.getNext();
             i++;
         }
-        temp.next = null;
+        temp.setNext(null);
         tail = temp;
         size = index + 1;
     }
@@ -153,8 +153,8 @@ public class DoublyList<T> implements Iterable<T> {
         @Override
         public T next() {
             if (current == null) return null;
-            T data = current.data;
-            current = current.next;
+            T data = current.getData();
+            current = current.getNext();
             return data;
         }
     }

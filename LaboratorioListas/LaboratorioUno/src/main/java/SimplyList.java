@@ -32,30 +32,30 @@ public class SimplyList<T> implements Iterable<T> {
             head = newNode;
         } else {
             Node<T> current = head;
-            while (current.next != null) {
-                current = current.next;
+            while (current.getNext() != null) {
+                current = current.getNext();
             }
-            current.next = newNode;
+            current.setNext(newNode);
         }
         size++;
     }
 
     public void remove() {
-        if (head != null) head = head.next;
+        if (head != null) head = head.getNext();
         size--;
     }
 
     public T getFirst() {
         if (head == null) return null;
-        return head.data;
+        return head.getData();
     }
 
     public T getSecond() {
-        if (head == null || head.next == null) {
+        if (head == null || head.getNext() == null) {
             return null;
         }
 
-        return head.next.data;
+        return head.getNext().getData();
     }
 
     public int size() {
@@ -78,8 +78,8 @@ public class SimplyList<T> implements Iterable<T> {
         @Override
         public T next() {
             if (current == null) return null;
-            T data = current.data;
-            current = current.next;
+            T data = current.getData();
+            current = current.getNext();
             return data;
         }
     }
