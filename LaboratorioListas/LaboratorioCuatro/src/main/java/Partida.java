@@ -23,11 +23,17 @@ public class Partida {
         this.indice = indice;
     }
 
+    /*
+    Agrega un jugador a la partida
+     */
     public void agregarJugador(String jugador) {
         System.out.println("Agregando jugador " + jugador);
         listaJugadores.add(jugador, indice);
     }
 
+    /*
+    Avanza el indice de forma ascendente o reinicia su contador a 0 si se llegó al último elemento
+     */
     public void avanzarJugadorAdelante() {
         if (listaJugadores.size() == 0) {
             System.out.println("No hay jugadores");
@@ -44,6 +50,9 @@ public class Partida {
         System.out.println("Es turno de: " + nombre);
     }
 
+    /*
+    Avanza el indice de forma descendente o reinicia su contador al ultimo elemento de la lista si se llegó al primer elemento
+     */
     public void avanzarJugadorAnterior() {
         if (listaJugadores.size() == 0) {
             System.out.println("No hay jugadores");
@@ -60,6 +69,9 @@ public class Partida {
         System.out.println("Es turno de: " + nombre);
     }
 
+    /*
+    Muestra el jugador actual donde apunta el indice
+     */
     public void jugadorActual() {
         if (listaJugadores.size() == 0) {
             System.out.println("No hay jugadores");
@@ -68,6 +80,9 @@ public class Partida {
         System.out.println("Jugador actual: " + listaJugadores.get(indice));
     }
 
+    /*
+    Muestra el jugador anterior al indice, donde el indice se busca en la ultima posición de la lista si el indice es 0
+     */
     public void jugadorAnterior() {
         if (listaJugadores.size() == 0) {
             System.out.println("No hay jugadores");
@@ -82,6 +97,9 @@ public class Partida {
         System.out.println(jugador != null ? "Jugador anterior: " + jugador: "No hay un jugador anterior");
     }
 
+    /*
+    Muestra el jugador siguiente al indice, donde el indice se busca en la primera posición de la lista si el indice es el último de la lista
+     */
     public void jugadorSiguiente() {
         if (listaJugadores.size() == 0) {
             System.out.println("No hay jugadores");
@@ -96,6 +114,9 @@ public class Partida {
         System.out.println(jugador != null ? "Jugador siguiente: " + jugador: "No hay un jugador anterior");
     }
 
+    /*
+    Elimina un nodo de la lista que tenga en su data el nombre administrada
+     */
     public void expulsarJugador(String nombre) {
         if (listaJugadores.size() == 0) {
             System.out.println("No hay jugadores");
@@ -109,6 +130,9 @@ public class Partida {
         }
     }
 
+    /*
+    Muestra todos los jugadores desde el head hasta el tail
+     */
     public void mostrarJugadores() {
         System.out.println("Jugadores:");
         for (String jugador : listaJugadores) {

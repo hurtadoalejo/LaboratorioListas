@@ -25,6 +25,9 @@ public class CircularSimplyList<T> implements Iterable<T> {
         this.size = size;
     }
 
+    /*
+    Agrega un nuevo nodo en una posición específica de la lista
+     */
     public void add(T data, int index) {
         if (index < 0 || index > size) return;
         Node<T> newNode = new Node<>(data);
@@ -55,6 +58,9 @@ public class CircularSimplyList<T> implements Iterable<T> {
         size++;
     }
 
+    /*
+    Remueve un nodo de la lista basado en la data que este tenga
+     */
     public boolean remove(T data) {
         if (size == 0) return false;
 
@@ -77,6 +83,9 @@ public class CircularSimplyList<T> implements Iterable<T> {
         return false;
     }
 
+    /*
+    Elimina el primer nodo de la lista
+     */
     private boolean removeFirst() {
         if (size == 1) {
             head = null;
@@ -92,6 +101,9 @@ public class CircularSimplyList<T> implements Iterable<T> {
         return true;
     }
 
+    /*
+    Obtiene la data de un nodo basado en una posición de un nodo
+     */
     public T get(int index) {
         if (index < 0 || index >= size) return null;
         Node<T> current = head;

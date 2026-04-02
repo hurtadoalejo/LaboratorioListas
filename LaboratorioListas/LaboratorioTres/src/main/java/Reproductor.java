@@ -23,11 +23,17 @@ public class Reproductor {
         this.listaCanciones = listaCanciones;
     }
 
+    /*
+    Agrega una canción a la playlist
+     */
     public void agregarCancion(String cancion) {
         listaCanciones.add(cancion, indice);
         System.out.println("Cancion agregada: " + cancion);
     }
 
+    /*
+    Avanza de canción o reinicio el indice si llega al máximo para tener la forma circular infinita
+     */
     public void avanzarCancion() {
         String cancion = "";
         if (indice == listaCanciones.size()-1) {
@@ -40,6 +46,9 @@ public class Reproductor {
         System.out.println("Cancion avanzada: " + cancion);
     }
 
+    /*
+    Elimina una canción de la playlist dado el nombre de ella
+     */
     public void eliminarCancion(String cancion) {
         if (listaCanciones.remove(cancion)) {
             System.out.println("Cancion eliminada: " + cancion);
@@ -48,6 +57,9 @@ public class Reproductor {
         }
     }
 
+    /*
+    Muestra todas las canciones desde el head hasta el ultimo elemento
+     */
     public void mostrarCanciones() {
         System.out.println("Canciones:");
         for (String cancion : listaCanciones) {

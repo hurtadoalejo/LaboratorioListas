@@ -23,6 +23,9 @@ public class DoublyList<T> implements Iterable<T> {
         return size;
     }
 
+    /*
+    Inserta un elemento en una posición específica
+     */
     public void add(T data, int index) {
         DoubleNode<T> newNode = new DoubleNode<>(data);
 
@@ -45,18 +48,27 @@ public class DoublyList<T> implements Iterable<T> {
         add(newNode, index);
     }
 
+    /*
+    Inserta un nodo al inicio de la lista
+     */
     private void addFirst(DoubleNode<T> newNode) {
         newNode.setNext(head);
         head.setPrev(newNode);
         head = newNode;
     }
 
+    /*
+    Inserta un nodo al final de la lista
+     */
     private void addLast(DoubleNode<T> newNode) {
         tail.setNext(newNode);
         newNode.setPrev(tail);
         tail = newNode;
     }
 
+    /*
+    Inserta un nodo en una posición intermedia
+     */
     private void add(DoubleNode<T> newNode, int index) {
         DoubleNode<T> current;
 
@@ -78,6 +90,9 @@ public class DoublyList<T> implements Iterable<T> {
         current.setPrev(newNode);
     }
 
+    /*
+    Elimina el primer elemento de la lista
+     */
     public void remove() {
         if (head == null) return;
 
@@ -91,16 +106,25 @@ public class DoublyList<T> implements Iterable<T> {
         size--;
     }
 
+    /*
+    Retorna el primero elemento
+     */
     public T getFirst() {
         if (head == null) return null;
         return head.getData();
     }
 
+    /*
+    Retorna el último elemento
+     */
     public T getLast() {
         if (tail == null) return null;
         return tail.getData();
     }
 
+    /*
+    Retorna el elemento en una posición específica
+     */
     public T get(int index) {
         if (index < 0 || index >= size) return null;
 

@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e6db192d-f63b-4b09-a011-ff3d24581de2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/CircularDoublyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/CircularDoublyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioCuatro/src/main/java/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaboratorioDos/src/main/java/DoublyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioDos/src/main/java/DoublyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaboratorioDos/src/main/java/Historial.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioDos/src/main/java/Historial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LaboratorioTres/src/main/java/CircularSimplyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/CircularSimplyList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Reproductor.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioTres/src/main/java/Reproductor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaboratorioUno/src/main/java/Panaderia.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioUno/src/main/java/Panaderia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaboratorioUno/src/main/java/SimplyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LaboratorioUno/src/main/java/SimplyList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1775134679695</updated>
       <workItem from="1775134684740" duration="21666000" />
-      <workItem from="1775157100756" duration="615000" />
+      <workItem from="1775157100756" duration="3955000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        /*
-        Los metodos agregar cancion y eliminar cancion la agrega o quita en la posicion que se este en la playlist
-        Ej: Si hay 5 canciones y estoy en la posicion 2, al agregar una esta quedara en la cancion 3
-         */
         Reproductor reproductor = new Reproductor();
         reproductor.agregarCancion("GuacaGuaca");
         reproductor.agregarCancion("Además de mi");

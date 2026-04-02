@@ -36,6 +36,9 @@ public class CircularDoublyList<T> implements Iterable<T>{
         this.size = size;
     }
 
+    /*
+    Obtiene un elemento de la lista dado su indice
+     */
     public T get(int index) {
         if (index < 0 || index >= size) return null;
         if (size == 1) return head.getData();
@@ -43,6 +46,9 @@ public class CircularDoublyList<T> implements Iterable<T>{
         return findNode(index).getData();
     }
 
+    /*
+    Agrega un nuevo nodo a la lista en una posición específica de esta
+     */
     public void add(T data, int index) {
         if (index < 0 || index > size) return;
 
@@ -69,6 +75,9 @@ public class CircularDoublyList<T> implements Iterable<T>{
         size++;
     }
 
+    /*
+    Añade un nodo a la lista si esta se encuentra vacia
+     */
     private void addEmptyList(DoubleNode<T> node) {
         head = node;
         tail = node;
@@ -77,6 +86,9 @@ public class CircularDoublyList<T> implements Iterable<T>{
         size++;
     }
 
+    /*
+    Añade un nodo a la lista en la primer posición
+     */
     private void addFirstList(DoubleNode<T> node) {
         node.setNext(head);
         head.setPrev(node);
@@ -86,6 +98,9 @@ public class CircularDoublyList<T> implements Iterable<T>{
         size++;
     }
 
+    /*
+    Añade un nodo a la lista en la ultima posición
+     */
     private void addLastList(DoubleNode<T> node) {
         node.setNext(head);
         node.setPrev(tail);
@@ -95,6 +110,9 @@ public class CircularDoublyList<T> implements Iterable<T>{
         size++;
     }
 
+    /*
+    Elimina un nodo de la lista dado la data de este
+     */
     public boolean remove(T data) {
         if (size == 0) return false;
         DoubleNode<T> node = head;
@@ -121,11 +139,17 @@ public class CircularDoublyList<T> implements Iterable<T>{
         return false;
     }
 
+    /*
+    Actualiza la cola y cabeza de la lista si se eliminó este
+     */
     private void updateHeadTail(DoubleNode<T> node) {
         if (node == head) head = node.getNext();
         if (node == tail) tail = node.getPrev();
     }
 
+    /*
+    Obtiene un nodo de la lista dado un indice
+     */
     private DoubleNode<T> findNode(int index) {
         DoubleNode<T> node;
         if (index > size / 2) {

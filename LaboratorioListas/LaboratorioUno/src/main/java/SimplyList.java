@@ -25,6 +25,9 @@ public class SimplyList<T> implements Iterable<T> {
         this.size = size;
     }
 
+    /*
+    Añade un elemento al final de la lista
+     */
     public void add(T data) {
         Node<T> newNode = new Node<>(data);
 
@@ -40,16 +43,25 @@ public class SimplyList<T> implements Iterable<T> {
         size++;
     }
 
+    /*
+    Elimina el primer elemento de la lista
+     */
     public void remove() {
         if (head != null) head = head.getNext();
         size--;
     }
 
+    /*
+    Retorna el primer elemento si existe
+     */
     public T getFirst() {
         if (head == null) return null;
         return head.getData();
     }
 
+    /*
+    Retorna el segundo elemento si existe
+     */
     public T getSecond() {
         if (head == null || head.getNext() == null) {
             return null;

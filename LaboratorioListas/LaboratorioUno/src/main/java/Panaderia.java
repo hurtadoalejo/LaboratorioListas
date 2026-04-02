@@ -13,10 +13,17 @@ public class Panaderia {
         this.clientes = clientes;
     }
 
+    /*
+    Agrega un cliente al final de la lista, utilizandolo como cola FIFO
+     */
     public void agregarCliente(Cliente cliente) {
         clientes.add(cliente);
+        System.out.println("Cliente agregado: " + cliente.getNombre());
     }
 
+    /*
+    Atiende al primer cliente, el cual lo elimina de la lista
+     */
     public void atenderCliente() {
         if (clientes.size() == 0) {
             System.out.println("No tiene clientes para atender");
@@ -26,6 +33,9 @@ public class Panaderia {
         }
     }
 
+    /*
+    Muestra todos los clientes en orden de llegada
+     */
     public void mostrarClientes() {
         System.out.println("Lista de clientes:");
         for (Cliente cliente : clientes) {
@@ -33,9 +43,12 @@ public class Panaderia {
         }
     }
 
+    /*
+    Consulta el segundo cliente de la cola
+     */
     public void consultarSegundoCliente() {
-        if (clientes.size() == 0) {
-            System.out.println("No hay clientes para consultar");
+        if (clientes.size() < 2) {
+            System.out.println("No hay suficientes clientes para consultar");
         } else {
             System.out.println("El segundo cliente para atender es: " + clientes.getSecond().getNombre() + ".");
         }
