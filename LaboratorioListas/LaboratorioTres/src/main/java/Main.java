@@ -8,7 +8,7 @@ public class Main {
         reproductor.agregarCancion("GuacaGuaca");
         reproductor.agregarCancion("Además de mi");
         System.out.println(reproductor.getListaCanciones().get(0));
-        reproductor.eliminarCancion();
+        reproductor.eliminarCancion("Además de mi");
         reproductor.mostrarCanciones();
         System.out.println("//////////////////");
         reproductor.agregarCancion("Amantes");

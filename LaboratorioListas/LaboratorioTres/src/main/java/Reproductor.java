@@ -40,9 +40,12 @@ public class Reproductor {
         System.out.println("Cancion avanzada: " + cancion);
     }
 
-    public void eliminarCancion() {
-        System.out.println("Cancion eliminada: " + listaCanciones.get(indice));
-        listaCanciones.remove(indice);
+    public void eliminarCancion(String cancion) {
+        if (listaCanciones.remove(cancion)) {
+            System.out.println("Cancion eliminada: " + cancion);
+        } else {
+            System.out.println("Cancion no eliminada, no existe: " + cancion);
+        }
     }
 
     public void mostrarCanciones() {

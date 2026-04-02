@@ -55,30 +55,41 @@ public class CircularSimplyList<T> implements Iterable<T> {
         size++;
     }
 
-    public void remove(int index) {
-        if (head == null || index < 0 || index >= size) return;
+    public boolean remove(T data) {
+        if (size == 0) return false;
 
-        if (index == 0) {
-            if (size == 1) {
-                head = null;
-            } else {
-                Node<T> tail = head;
-                while (tail.getNext() != head) {
-                    tail = tail.getNext();
-                }
-                head = head.getNext();
-                tail.setNext(head);
-            }
-        } else {
-            Node<T> current = head;
-
-            for (int i = 0; i < index - 1; i++) {
-                current = current.getNext();
-            }
-            current.setNext(current.getNext().getNext());
+        if (head.getData().equals(data)) {
+            return removeFirst();
         }
 
+        Node<T> current = head.getNext();
+        Node<T> previous = head;
+
+        while (current != head) {
+            if (current.getData().equals(data)) {
+                previous.setNext(current.getNext());
+                size--;
+                return true;
+            }
+            previous = current;
+            current = current.getNext();
+        }
+        return false;
+    }
+
+    private boolean removeFirst() {
+        if (size == 1) {
+            head = null;
+        } else {
+            Node<T> tail = head;
+            while (tail.getNext() != head) {
+                tail = tail.getNext();
+            }
+            head = head.getNext();
+            tail.setNext(head);
+        }
         size--;
+        return true;
     }
 
     public T get(int index) {
